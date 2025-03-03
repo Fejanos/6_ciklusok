@@ -140,6 +140,51 @@ public class Ciklusok {
         
         // While - nem biztos igaz a feltétel az elején
         // DoWhile - egyszer mindenképp lefut, ha igaz ha nem a feltétel
+        
+        // Programozási tételek
+        List<Integer> szamok = List.of(1,5,10,3,10,25,-5);
+        
+        // 1. Összegzés tétel - SZUMMA
+        int osszeg = 0;
+        for(int i = 0; i < szamok.size(); i++){
+            osszeg = osszeg + szamok.get(i);
+            // osszeg += szamok.get(i);
+            // első három iteráció:
+            // 0 = 0 + 1; --> 1
+            // 1 = 1 + 5; --> 6
+            // 6 = 6 + 10; --> 16 
+        }
+        System.out.println("Összeg: " + osszeg);
+        
+        // 2. Megszámlálás tétele - keressük hány db 10-es szám van
+        int db = 0;
+        for(int i = 0; i < szamok.size(); i++){
+            // Ha a vizsgált elem a listából 10
+            if(szamok.get(i) == 10){
+                db++; // növelem a darab értékét
+            }
+        }
+        System.out.println("10-es darabszáma: " + db);
+        
+        // Minimum keresés
+        int min = szamok.get(0); // Első elemet megadom neki
+        for(int i = 0; i < szamok.size(); i++){
+            // Ha a minimum nagyobb, mint a vizsgált elem
+            if(min > szamok.get(i)){
+                min = szamok.get(i); // új értéket kap
+            }
+        }
+        System.out.println("Minimum: " + min);
+        
+        // Maximum keresés
+        int max = szamok.get(0); // Feltételezünk egy értéket
+        for(int i = 0; i < szamok.size(); i++){
+            // Ha a maximum kisebb, mint a vizsgált elem
+            if(max < szamok.get(i)){
+                max = szamok.get(i); // új értéket kap
+            }
+        }
+        System.out.println("Maximum: " + max);
     }
     
 }
