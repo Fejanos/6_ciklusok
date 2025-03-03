@@ -116,13 +116,30 @@ public class Ciklusok {
         }
         
         // Addig kérjünk be számokat, amíg nem 0 a megadott szám
-        System.out.println("Kérem egy számot: ");
+        System.out.println("Kérek egy számot: ");
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt(); // szám bekérése
         while(num != 0){
             System.out.println("Kérek egy számot (0-t a kilépéshez):");
             num = sc.nextInt();
         }
+        
+        // Do-While - hátultesztelő
+        // a ciklusmag egyszer mindenképp lefut és utána ellenőrzi a feltételt
+        /*
+        do{
+            ciklusmag
+        }while(feltétel);
+        */
+        // Előző feladat minta
+        int num2;
+        do{
+            System.out.println("Kérek egy számot (0-t a kilépéshez):");
+            num2 = sc.nextInt();
+        }while(num2 != 0);
+        
+        // While - nem biztos igaz a feltétel az elején
+        // DoWhile - egyszer mindenképp lefut, ha igaz ha nem a feltétel
     }
     
 }
